@@ -1,12 +1,84 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>José Luis Soto Ortiz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sitio académico personal de José Luis Soto Ortiz: investigación educativa, docencia, publicaciones y colaboración académica.">
+  <meta name="theme-color" content="#192e42">
+  <title>José Luis Soto Ortiz | Sitio académico</title>
+  <style>
+    :root{--ink:#172c40;--deep:#192e42;--deep2:#263f56;--wine:#985c66;--muted:#5c6c79;--line:#e3e8eb;--off:#f5f7f8;--white:#fff;--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);line-height:1.65;background:white}a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid #dbad8e;outline-offset:3px} .container{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
+    .topbar{position:sticky;top:0;z-index:30;background:rgba(25,46,66,.98);color:#fff;border-bottom:1px solid rgba(255,255,255,.14)}.nav-wrap{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:1.03rem;font-weight:750;letter-spacing:.08em;text-decoration:none;white-space:nowrap}.brand span{font-weight:400;color:#c0ccd4}.nav{display:flex;gap:29px;align-items:center}.nav a{text-decoration:none;color:#e4ecf1;font-size:.88rem;font-weight:550}.nav a:hover{color:#fff;text-decoration:underline;text-underline-offset:7px}.menu-toggle{display:none;border:1px solid #8293a2;background:transparent;color:#fff;border-radius:7px;padding:7px 11px;font-size:1rem;cursor:pointer}
+    .hero{background:radial-gradient(circle at 83% 18%,rgba(255,255,255,.09),transparent 28%),linear-gradient(130deg,#1a3045,#29455d);color:white;padding:104px 0 110px;position:relative;overflow:hidden}.hero:after{content:"";width:340px;height:340px;border:1px solid rgba(255,255,255,.12);border-radius:50%;position:absolute;right:-90px;bottom:-190px;pointer-events:none}.eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#bad0df;margin:0 0 15px}.hero h1{font-size:clamp(2.6rem,5.9vw,5.2rem);font-weight:730;line-height:1.1;letter-spacing:-.04em;margin:0 0 20px;max-width:900px}.hero .lead{font-size:clamp(1.05rem,2vw,1.32rem);margin:0 0 12px;color:#f0f5f8}.hero .sub{font-size:1.02rem;color:#d2dee7;max-width:730px;margin:0 0 30px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.button{display:inline-block;border:1px solid transparent;text-decoration:none;padding:11px 19px;border-radius:5px;font-size:.93rem;font-weight:650;transition:transform .15s,background .15s}.button:hover{transform:translateY(-2px)}.button.primary{background:white;color:var(--deep)}.button.ghost{color:white;border-color:#879cab}.button.ghost:hover{background:#ffffff14}
+    main section{padding:83px 0}.section-muted{background:var(--off)}.section-tag{color:var(--wine);text-transform:uppercase;letter-spacing:.15em;font-size:.78rem;font-weight:780;margin:0 0 9px}.section-title{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.2;letter-spacing:-.025em;margin:0 0 21px}.intro{max-width:760px;color:#4c5e6b;font-size:1.06rem;margin:0 0 35px}.about-grid{display:grid;grid-template-columns:1.45fr .8fr;gap:65px;align-items:start}.about-copy p{margin:0 0 18px}.details{border-left:3px solid var(--wine);padding:5px 0 5px 25px}.details strong{display:block;margin:0 0 12px}.details p{margin:0 0 16px;color:var(--muted);font-size:.93rem}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:29px;box-shadow:0 7px 20px rgba(23,44,64,.035)}.card .num{color:var(--wine);font-size:.79rem;font-weight:780;letter-spacing:.13em}.card h3{font-size:1.15rem;margin:15px 0 11px;line-height:1.35}.card p{font-size:.95rem;color:var(--muted);margin:0}.text-link{display:inline-flex;gap:6px;margin-top:18px;color:#244f70;font-size:.91rem;font-weight:650;text-decoration-thickness:1px;text-underline-offset:4px}.publication{border-top:1px solid var(--line);padding:22px 0}.publication h3{font-size:1.12rem;margin:0 0 7px}.publication p{color:var(--muted);margin:0;font-size:.95rem}.note{background:#edf2f4;border-left:3px solid #668394;padding:15px 19px;font-size:.91rem;color:#435766;margin-top:18px}.split{display:grid;grid-template-columns:1fr 1fr;gap:54px}.small-list{list-style:none;padding:0;margin:0}.small-list li{padding:13px 0;border-bottom:1px solid var(--line)}.small-list li:first-child{border-top:1px solid var(--line)}.contact{background:var(--deep);color:white}.contact .section-tag{color:#d6a5ad}.contact .intro{color:#d8e2e9}.contact-links{display:flex;gap:12px;flex-wrap:wrap}.contact-links a{display:inline-block;border:1px solid #74899b;padding:10px 15px;border-radius:5px;color:#fff;text-decoration:none;font-size:.92rem}.contact-links a:hover{background:#ffffff15}.footer{background:#122639;color:#bdcad3;padding:24px 0;font-size:.82rem}.footer-content{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer a{color:#dfe7ee}
+    @media(max-width:800px){.cards{grid-template-columns:1fr 1fr}.about-grid,.split{grid-template-columns:1fr;gap:25px}.nav{gap:14px}}
+    @media(max-width:640px){.container{width:min(var(--max),calc(100% - 34px))}.nav-wrap{min-height:64px}.menu-toggle{display:block}.nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--deep);padding:12px 18px 20px;flex-direction:column;align-items:stretch;border-top:1px solid #43586b}.nav.open{display:flex}.nav a{padding:7px}.hero{padding:73px 0 78px}.hero h1{font-size:2.75rem}main section{padding:62px 0}.cards{grid-template-columns:1fr}.card{padding:23px}.footer-content{flex-direction:column;gap:5px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+  </style>
 </head>
 <body>
-  <h1>José Luis Soto Ortiz</h1>
-  <p>Investigador y docente universitario.</p>
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio">JLSO <span>| Académico</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-controls="nav" aria-expanded="false">☰ Menú</button>
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a><a href="#perfil">Perfil</a><a href="#investigacion">Investigación</a><a href="#publicaciones">Publicaciones</a><a href="#docencia">Docencia</a><a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="container">
+      <p class="eyebrow">Investigación · Docencia · Tecnología educativa</p>
+      <h1 id="hero-title">José Luis<br>Soto Ortiz</h1>
+      <p class="lead">Doctor en Sistemas y Ambientes Educativos</p>
+      <p class="sub">Un espacio para compartir investigación educativa, producción académica, experiencias docentes y proyectos de colaboración.</p>
+      <div class="hero-actions"><a href="#investigacion" class="button primary">Explorar investigación ↗</a><a href="#perfil" class="button ghost">Conocer mi trayectoria</a></div>
+    </div>
+  </section>
+  <main>
+    <section id="perfil" aria-labelledby="perfil-title">
+      <div class="container about-grid">
+        <div class="about-copy"><p class="section-tag">Perfil académico</p><h2 class="section-title" id="perfil-title">Investigar, enseñar y colaborar</h2>
+          <p>Mi trabajo académico se desarrolla en la intersección de la investigación educativa, los procesos de aprendizaje y las tecnologías digitales. Me interesan especialmente las posibilidades, los límites y las implicaciones de la inteligencia artificial en la educación.</p>
+          <p>Este sitio reúne líneas de trabajo, actividades docentes, publicaciones y colaboraciones académicas. Su contenido se actualizará conforme avancen los proyectos.</p>
+        </div>
+        <aside class="details" aria-label="Adscripciones académicas"><strong>Vinculación académica</strong><p>Universidad Pedagógica Veracruzana (UPV)<br>
+Departamento de Investigación</p><p>Universidad Veracruzana (UV)<br>
+Facultad de Estadística e Informática</p><p>Doctorado en Sistemas y Ambientes Educativos</p></aside>
+      </div>
+    </section>
+    <section class="section-muted" id="investigacion" aria-labelledby="investigacion-title">
+      <div class="container"><p class="section-tag">Áreas de interés</p><h2 class="section-title" id="investigacion-title">Investigación</h2><p class="intro">Algunas de las temáticas que articulan mi trabajo y mis proyectos de colaboración académica.</p>
+        <div class="cards">
+          <article class="card"><span class="num">01 / APRENDIZAJE</span><h3>Procesos de aprendizaje</h3><p>Estudio de experiencias formativas, mediación pedagógica y prácticas de enseñanza en contextos universitarios.</p></article>
+          <article class="card"><span class="num">02 / INTELIGENCIA ARTIFICIAL</span><h3>IA generativa y educación</h3><p>Uso crítico de herramientas de inteligencia artificial, criterios de logro y sus implicaciones para la formación.</p></article>
+          <article class="card"><span class="num">03 / CULTURA DIGITAL</span><h3>Tecnología educativa</h3><p>Recursos digitales, entornos de aprendizaje e innovación educativa examinados desde la investigación.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="publicaciones" aria-labelledby="publicaciones-title">
+      <div class="container"><p class="section-tag">Producción académica</p><h2 class="section-title" id="publicaciones-title">Publicaciones</h2><p class="intro">Artículos, capítulos de libro y otros trabajos de investigación.</p>
+        <div class="publication"><h3>Catálogo de publicaciones en preparación</h3><p>Este apartado se completará con referencias verificadas, año, revista o editorial y enlaces DOI.</p></div>
+        <div class="note">Para evitar referencias incompletas, todavía no se muestran títulos ni DOI. Aquí se pueden incorporar publicaciones en formato APA 7.</div>
+      </div>
+    </section>
+    <section class="section-muted" id="docencia" aria-labelledby="docencia-title">
+      <div class="container split">
+        <div><p class="section-tag">Formación</p><h2 class="section-title" id="docencia-title">Docencia</h2><p>Diseño de experiencias de aprendizaje, desarrollo de competencias digitales y acompañamiento académico en educación superior.</p></div>
+        <div><h3 style="margin-top:6px">Líneas de trabajo docente</h3><ul class="small-list"><li>Competencias informacionales y digitales</li><li>Inteligencia artificial en la formación docente</li><li>Recursos educativos digitales</li><li>Metodologías activas e investigación educativa</li></ul></div>
+      </div>
+    </section>
+    <section class="contact" id="contacto" aria-labelledby="contacto-title"><div class="container"><p class="section-tag">Vinculación</p><h2 class="section-title" id="contacto-title">Contacto y redes académicas</h2><p class="intro">Para conocer mi actividad académica o explorar posibilidades de colaboración, puedes consultar mis perfiles públicos.</p><div class="contact-links"><a href="https://www.researchgate.net/" target="_blank" rel="noopener noreferrer">ResearchGate ↗</a><a href="https://orcid.org/" target="_blank" rel="noopener noreferrer">ORCID ↗</a><a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a></div><p style="font-size:.82rem;color:#bbcbd5;margin-top:22px">Los enlaces anteriores son generales; sustituir por las direcciones de tus perfiles personales.</p></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-content"><span>© <span id="year">2026</span> José Luis Soto Ortiz · Sitio académico personal</span><span>Diseñado para GitHub Pages · <a href="#inicio">Volver arriba ↑</a></span></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click',()=>{const opened=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(opened));toggle.textContent=opened?'✕ Cerrar':'☰ Menú'});
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰ Menú'}));
+  </script>
 </body>
 </html>
